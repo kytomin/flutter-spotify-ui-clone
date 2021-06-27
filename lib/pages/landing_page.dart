@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:spotify_ui/pages/home_page.dart';
 import 'package:spotify_ui/utils/constants.dart';
 
 class LandingPage extends StatelessWidget {
@@ -10,7 +11,6 @@ class LandingPage extends StatelessWidget {
       child: CupertinoTabScaffold(
         tabBar: CupertinoTabBar(
           activeColor: Theme.of(context).iconTheme.color,
-          backgroundColor: Color(0xFF282828),
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.search_outlined), label: 'Search'),
@@ -20,7 +20,7 @@ class LandingPage extends StatelessWidget {
         tabBuilder: (BuildContext context, int index) {
           switch (index){
             case 0:
-              return Text('0');
+              return HomePage();
             case 1:
               return Text('1');
             case 2:

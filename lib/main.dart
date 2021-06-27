@@ -25,9 +25,8 @@ class MyApp extends StatelessWidget {
       theme: lightThemeData(context),
       darkTheme: darkThemeData(context),
       themeMode: ThemeMode.dark,
-      home: SafeArea(
-        child: LandingPage(),
-        ),
+      home: SafeArea(child: LandingPage()),
+
       );
   }
 }
