@@ -73,31 +73,7 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                  PlaylistView(
-                    title: 'Made for You',
-                    children: [
-                      MusicTile(
-                        text: 'The Rolling Stones',
-                        image: Image.network(
-                            'https://www.snapgalleries.com/wp-content/uploads/2016/03/2141.png'),
-                      ),
-                      MusicTile(
-                        text: 'Army Of Lovers',
-                        image: Image.network(
-                            'https://avatars.mds.yandex.net/get-zen_doc/1596193/pub_5de9ede11d656a00aeaf5a7e_5de9ef9243863f00b20464d4/scale_1200'),
-                      ),
-                      MusicTile(
-                        text: 'System of a Down',
-                        image: Image.network(
-                            'https://im0-tub-ru.yandex.net/i?id=a88a1b1d4e4d8f3e818e798496990c94&n=13'),
-                      ),
-                      MusicTile(
-                        text: 'MORGENSHTERN',
-                        image: Image.network(
-                            'https://im0-tub-ru.yandex.net/i?id=4598aab9d74b25edac3c19893c156e8c&n=13'),
-                      ),
-                    ],
-                  ),
+
                   PlaylistView(
                     image: Image.network('https://pbs.twimg.com/media/EmsDcJkXUAAU4eS.jpg'),
                     label: 'MORE LIKE',
@@ -124,7 +100,32 @@ class HomePage extends StatelessWidget {
                             'https://im0-tub-ru.yandex.net/i?id=4598aab9d74b25edac3c19893c156e8c&n=13'),
                       ),
                     ],
-                  )
+                  ),
+                  PlaylistView(
+                    title: 'Made for You',
+                    children: [
+                      MusicTile(
+                        text: 'The Rolling Stones',
+                        image: Image.network(
+                            'https://www.snapgalleries.com/wp-content/uploads/2016/03/2141.png'),
+                      ),
+                      MusicTile(
+                        text: 'Army Of Lovers',
+                        image: Image.network(
+                            'https://avatars.mds.yandex.net/get-zen_doc/1596193/pub_5de9ede11d656a00aeaf5a7e_5de9ef9243863f00b20464d4/scale_1200'),
+                      ),
+                      MusicTile(
+                        text: 'System of a Down',
+                        image: Image.network(
+                            'https://im0-tub-ru.yandex.net/i?id=a88a1b1d4e4d8f3e818e798496990c94&n=13'),
+                      ),
+                      MusicTile(
+                        text: 'MORGENSHTERN',
+                        image: Image.network(
+                            'https://im0-tub-ru.yandex.net/i?id=4598aab9d74b25edac3c19893c156e8c&n=13'),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),

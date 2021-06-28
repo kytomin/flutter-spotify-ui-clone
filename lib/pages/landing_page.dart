@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:spotify_ui/pages/home_page.dart';
-import 'package:spotify_ui/utils/constants.dart';
+import 'package:spotify_ui/pages/search_page.dart';
 
 class LandingPage extends StatelessWidget {
 
@@ -22,7 +22,7 @@ class LandingPage extends StatelessWidget {
             case 0:
               return HomePage();
             case 1:
-              return Text('1');
+              return SearchPage();
             case 2:
               return Text('2');
             default:
