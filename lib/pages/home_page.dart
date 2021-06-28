@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
                       MusicTile(
                         text: 'The Rolling Stones',
                         image: Image.network(
-                            'https://www.snapgalleries.com/wp-content/uploads/2016/03/2141.png'),
+                            'https://24smi.org/public/media/resize/800x-/celebrity/2018/09/25/t1cgzo4czgou-gruppa-the-rolling-stones.jpg'),
                       ),
                       MusicTile(
                         text: 'Army Of Lovers',
@@ -107,7 +107,7 @@ class HomePage extends StatelessWidget {
                       MusicTile(
                         text: 'The Rolling Stones',
                         image: Image.network(
-                            'https://www.snapgalleries.com/wp-content/uploads/2016/03/2141.png'),
+                            'https://24smi.org/public/media/resize/800x-/celebrity/2018/09/25/t1cgzo4czgou-gruppa-the-rolling-stones.jpg'),
                       ),
                       MusicTile(
                         text: 'Army Of Lovers',
