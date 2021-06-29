@@ -35,7 +35,7 @@ class SearchPage extends StatelessWidget {
                           SizedBox(
                             height: 25,
                           ),
-                        ]),
+                        ], ),
                       ),
                     ),
                     SliverPersistentHeader(
