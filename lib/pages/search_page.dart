@@ -2,6 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:spotify_ui/widgets/genre_tile.dart';
 
+final _genres = [
+  GenreTile(
+    color: Color(0Xffd01e31),
+    text: 'Rock',
+    image: Image.network(
+        'https://i.scdn.co/image/ab67706f00000003feb66cd1f6632ecfa89b3e8c'),
+  ),
+  GenreTile(
+    color: Color(0xff8c67ac),
+    text: 'Pop',
+    image: Image.network(
+        'https://avatars.yandex.net/get-music-content/2359742/0a822342.a.10539139-1/m1000x1000?webp=false'),
+  ),
+  GenreTile(
+    color: Color(0xffe0a03a),
+    text: 'Hip Hop',
+    image: Image.network(
+        'https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/5/f/d/8/d81c-4968-4c38-b0bd-050a5638e284'),
+  ),
+  GenreTile(
+    color: Color(0xff1e8284),
+    text: 'Chill',
+    image: Image.network(
+        'https://avatars.yandex.net/get-music-content/2114230/f49e99af.a.10245386-1/m1000x1000?webp=false'),
+  ),
+];
+
 class SearchPage extends StatelessWidget {
   final ScrollController controller = ScrollController();
   final ScrollPhysics physics = ScrollPhysics();
@@ -21,21 +48,23 @@ class SearchPage extends StatelessWidget {
                     new SliverPadding(
                       padding: new EdgeInsets.all(0),
                       sliver: new SliverList(
-                        delegate: new SliverChildListDelegate([
-                          SizedBox(
-                            height: 30,
-                          ),
-                          Align(
-                            child: Text(
-                              'Search',
-                              style: Theme.of(context).textTheme.headline5,
+                        delegate: new SliverChildListDelegate(
+                          [
+                            SizedBox(
+                              height: 30,
                             ),
-                            alignment: Alignment.topLeft,
-                          ),
-                          SizedBox(
-                            height: 25,
-                          ),
-                        ], ),
+                            Align(
+                              child: Text(
+                                'Search',
+                                style: Theme.of(context).textTheme.headline5,
+                              ),
+                              alignment: Alignment.topLeft,
+                            ),
+                            SizedBox(
+                              height: 25,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     SliverPersistentHeader(
@@ -105,36 +134,15 @@ class SearchPage extends StatelessWidget {
                         StaggeredTile.count(1, 0.6),
                       ],
                       physics: NeverScrollableScrollPhysics(),
-                      children: [
-                        GenreTile(
-                          color: Color(0Xffd01e31),
-                          text: 'Rock',
-                          image: Image.network(
-                              'https://i.scdn.co/image/ab67706f00000003feb66cd1f6632ecfa89b3e8c'),
-                        ),
-                        GenreTile(
-                          color: Color(0xff8c67ac),
-                          text: 'Pop',
-                          image: Image.network(
-                              'https://avatars.yandex.net/get-music-content/2359742/0a822342.a.10539139-1/m1000x1000?webp=false'),
-                        ),
-                        GenreTile(
-                          color: Color(0xffe0a03a),
-                          text: 'Hip Hop',
-                          image: Image.network(
-                              'https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/5/f/d/8/d81c-4968-4c38-b0bd-050a5638e284'),
-                        ),
-                        GenreTile(
-                          color: Color(0xff1e8284),
-                          text: 'Chill',
-                          image: Image.network(
-                              'https://avatars.yandex.net/get-music-content/2114230/f49e99af.a.10245386-1/m1000x1000?webp=false'),
-                        ),
-                      ],
+                      children: _genres,
                     ),
-                    Text('Browse all',
-                      style: Theme.of(context).textTheme.bodyText1,),
-                    SizedBox(height: 15,),
+                    Text(
+                      'Browse all',
+                      style: Theme.of(context).textTheme.bodyText1,
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
                     StaggeredGridView.count(
                       shrinkWrap: true,
                       mainAxisSpacing: 15,
@@ -148,32 +156,7 @@ class SearchPage extends StatelessWidget {
                         StaggeredTile.count(1, 0.6),
                       ],
                       physics: NeverScrollableScrollPhysics(),
-                      children: [
-                        GenreTile(
-                          color: Color(0Xffd01e31),
-                          text: 'Rock',
-                          image: Image.network(
-                              'https://i.scdn.co/image/ab67706f00000003feb66cd1f6632ecfa89b3e8c'),
-                        ),
-                        GenreTile(
-                          color: Color(0xff8c67ac),
-                          text: 'Pop',
-                          image: Image.network(
-                              'https://avatars.yandex.net/get-music-content/2359742/0a822342.a.10539139-1/m1000x1000?webp=false'),
-                        ),
-                        GenreTile(
-                          color: Color(0xffe0a03a),
-                          text: 'Hip Hop',
-                          image: Image.network(
-                              'https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/5/f/d/8/d81c-4968-4c38-b0bd-050a5638e284'),
-                        ),
-                        GenreTile(
-                          color: Color(0xff1e8284),
-                          text: 'Chill',
-                          image: Image.network(
-                              'https://avatars.yandex.net/get-music-content/2114230/f49e99af.a.10245386-1/m1000x1000?webp=false'),
-                        ),
-                      ],
+                      children: _genres,
                     ),
                     SizedBox(
                       height: 600,

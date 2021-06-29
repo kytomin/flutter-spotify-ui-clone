@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MusicTile extends StatelessWidget {
+class PlaylistTile extends StatelessWidget {
 
   final double width;
   final String text;
   final Image image;
 
-  const MusicTile({Key? key, this.width = 120, required this.text, required this.image}) : super(key: key);
+  const PlaylistTile({Key? key, this.width = 120, required this.text, required this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
